@@ -76,6 +76,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
 }
 
@@ -115,6 +116,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .project-course,
 .project-date,
@@ -153,6 +155,8 @@ h2 {
   height: 70px;
   align-items: center;
   justify-content: space-between;
+  /* le damos flex-wrap porque en tamaño grande se va a seguir comportando igual pero en tamaño pequeño va a comportarse de otra manera. */
+  flex-wrap: wrap;
 }
 
 ol,
@@ -209,6 +213,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer img {
@@ -266,6 +271,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .social {
@@ -321,7 +327,8 @@ figure {
 
 .container {
   /* border: 1px solid red; */
-  width: 1000px;
+  /* a container le quitamos el tamaño fijo y le asignamos un valor variable */
+  max-width: 1000px;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -330,10 +337,23 @@ figure {
   flex-wrap: inherit;
 }
 
+/* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
+@@media screen and (max-width: 1024px) {
+
+}
+
 /* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
 /* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
 @media screen and (max-width: 768px) {
   body {
     border: 10px solid green;
   }
+}
+
+@@media screen and (max-width: 480px) {
+
+}
+
+@@media screen and (max-width: 320px) {
+
 }
