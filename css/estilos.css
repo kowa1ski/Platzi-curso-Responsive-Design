@@ -139,13 +139,19 @@ h2 {
   margin-bottom: 10px;
 }
 
-
+/* Vamos a variar los valores siguientes para desatascar las dimensiones estáticas siguientes y hacerlas un poquito más elásticas. */
 .project-details {
-  width: 500px;
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
+}
+
+/* Vamos a hacer estas siguientes imágenes responsivas */
+.project-imageContainer img {
+  /* le vamos a dar el 100% de su elemento padre */
+  max-width: 100%
 }
 
 .header {
@@ -383,6 +389,17 @@ figure {
   /* Y el logo también lo queremos centrado */
   .header .logo {
     text-align: center;
+  }
+
+  .project {
+    display: block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  .project-details {
+    width: auto;
   }
 }
 
