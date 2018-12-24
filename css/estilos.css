@@ -329,6 +329,13 @@ figure {
   /* border: 1px solid red; */
   /* a container le quitamos el tamaño fijo y le asignamos un valor variable */
   max-width: 1000px;
+  /* El ancho será como máximo de 1000px pero con la siguiente instrucción fuerzo a que siempre, aunque sea menor, el tamaño que ocupe sea ese, osea le voy a decir el 100% para que si sus hijos son más pequeños la suma de los mismos no me haga que el contenedor me cuente con menos de 1000. Es decir, tendrá un tamaño de 1000 siempre incluso cuando la suma de sus hijos sea menor que el máximo de 1000. */
+  /* width: 100%; */
+
+  /* Justo la anterior valdría para esto pero mejor vamos a utilizar la siguiente para conseguir lo mismo, osea, que se fuerce que aunque la suma de los elementos hijos sea menor de 1000 éstos ocupen todo ese ancho de 1000 */
+  flex: 1;
+  /* La ventaja es que con la anterior , width: 100%; , si le añadimos padding, por ejemplo, pues ya nos puede distorsionar nuestro resultado. */
+
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -338,22 +345,55 @@ figure {
 }
 
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
-@@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1024px) {
+  body {
+    /* border: 10px solid green; */
+  }
 }
 
 /* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
 /* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
-@media screen and (max-width: 768px) {
-  body {
-    border: 10px solid green;
+
+/* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
+@media screen and (max-width: 767px) {
+  /* Comenzamos readaptando el header para esta resolución */
+  .header {
+    /* Esto hará que el menú se coloque bajo el logo */
+    display: block;
+    /* Modificaremos también el alto porque si no, nuestro menú no será visible por quedarse fuera del alto especificado así que vamos a tocar ese parámetro. Le pondremos , auto , para que pise el valor anterior y asigne un valor automático. */
+    height: auto;
+  }
+  .header ol {
+    /* vamos también a resetear el , ol , haciendo un , initial , que provoca que el display se resetee a su valor por defecto. */
+    /* display: initial; */
+    /* funciona. Igual sería hacerlo block. */
+    display: block;
+  }
+
+  /* Vamos a darle un poco de grosor a esos , li ,. */
+  .header ol li {
+    height: 50px;
+  }
+
+  /* queremos los , a , centrados */
+  .header a {
+    justify-content: center;
+  }
+
+  /* Y el logo también lo queremos centrado */
+  .header .logo {
+    text-align: center;
   }
 }
 
-@@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 480px) {
+  body {
+    /* border: 10px solid yellow; */
+  }
 }
 
-@@media screen and (max-width: 320px) {
-
+@media screen and (max-width: 320px) {
+  body {
+    /* border: 10px solid green; */
+  }
 }
