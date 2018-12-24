@@ -400,12 +400,39 @@ figure {
   }
   .project-details {
     width: auto;
+    /* Este 16px es el tamaño de fuente por defecto, por esto se comenta la línea, es redundante. */
+    /* font-size: 16px; */
+  }
+
+  /* Vamos a retocar un poco los márgenes para que sean relativos a partir de esta resolución en la que nos encontramos */
+  .project-course, .project-date, .project-url {
+    /* reducimos un poquito los márgenes para aprovechar mejor el espacio en pantallas más pequeñas. */
+    margin: .3em 0;
+  }
+
+
+  .project-title {
+    font-size: 1.5em;
+    /* y aquí retocamos también un porquito ese margen */
+    margin-bottom: .3em;
+  }
+  .project-url {
+    font-size: 1em;
+  }
+  .project-course {
+    font-size: .7em;
+  }
+  .project-date {
+    font-size: 1em;
+  }
+  .project-description {
+    font-size: .8em;
   }
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    /* border: 10px solid yellow; */
+  .project-details {
+    font-size: 12px;
   }
 }
 
