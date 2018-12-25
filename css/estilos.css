@@ -358,6 +358,11 @@ figure {
 @media screen and (max-width: 1024px) {
   body {
     /* border: 10px solid green; */
+
+  }
+  /* agregamos un poquito de padding para que los elementos de abajo no se peguen tanto a los costados. Para ello vamos a modificar un poco el , container , que afectará a todos los contenedores pero que está controlado, el resultado es bueno. */
+  .container {
+    padding: 0 1em;
   }
 }
 
@@ -464,6 +469,37 @@ figure {
 @media screen and (max-width: 480px) {
   .project-details {
     font-size: 12px;
+  }
+  /* El contacto tiene un alto fijo, por eso a partir de este tamaño se le va a trabajar con otro tamaño */
+  .contact {
+    /* Esto hará que, cuando los elementos hijos se apilen, se adapte el fondo y se agrande si hiciera falta. */
+    height: auto;
+    padding: 1em 0;
+    /* text-align: center; */
+    /* Esto comentado no tiene efecto porque hay nombrado un display flex y esto arruina el modelo de caja para instrucciones como estas.
+    Por ese motivo vamos a cambiar el display*/
+    display: block;
+    /* Ahora sí */
+    text-align: center;
+  }
+
+  /* Retocamos un poquito el botón */
+  .form-email button {
+    margin: 1em auto;
+    /* Un , em , en este caso vale 11 porque por defecto los textos dentro de un botón no son 16 sino que son 11 1em=11px(dentro de un botón). */
+  }
+
+  Vamos a recortar un poco el margen del bloque del formulario de contacto. Para ello atacamos al margen del h3 en su parte superior.
+  .form-email h3 {
+    margin-top: 0;
+  }
+  /* display flex nos viene muy bien cuando queremos que los elementos se ordenen unos al lado de los otros pero en esta medida vamos a preferir que se apilen. Es por eso que le vamos a cambiar el display. */
+  .footer {
+    display: block;
+    text-align: center;
+    /* En este momento los elementos no guardan una buena relación aunque ya estén apilados. Estamos sufriendo , margin colapsing ,. Para arreglarlo vamos a usar un truco de magia. Un hack o algo así que en este momento desconozco por qué funciona pero lo hace.
+    Vamos a añadir un borde Transparente*/
+    border: 1px solid transparent;
   }
 }
 
