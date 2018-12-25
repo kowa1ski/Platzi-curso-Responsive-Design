@@ -238,8 +238,12 @@ figure {
   margin-left: 20px;
 }
 .event {
-  margin: 10px;
-  width: 480px;
+  /* Variamos las medidas para convertirlas en medidas relativas */
+
+  /* 48+48+1+1 = 1000px , en su tamaño más grande */
+  margin: 1px;
+  width: 48%;
+
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -427,6 +431,33 @@ figure {
   }
   .project-description {
     font-size: .8em;
+  }
+
+  .event {
+    width: auto;
+
+    /* flex-shrink: 0; hace que el contenedor no haga ningún tipo de resize. */
+    flex-shrink: initial;
+  }
+
+  /* vamos a ajustar la imagen para que no nos genere un scroll horizontal */
+  /* event-image {
+    width: 100%;
+  } */
+  /* Esto de arriba no valdría. En este caso tenemos órdenes para una etiqueta(img) y estábamos queriendo ordenar a la clase. Esto genera un conflicto que se resuelve dando prioridada a la etiqueta frente a la clase. Lógicamente vamos a ordenar a la etiqueta y chim pum. */
+  .event img {
+    width: 100%;
+  }
+
+  .event-detail {
+    /* margin: -40px 10px 10px 10px; */
+    /* Esta solución de arriba resuelve bien haciéndolo de modo absoluto. */
+    /* En la siguiente línea se resuelve de manera relativa con , em ,. El font-size no lo encontramos nombrado explícito y por eso sabemos que es de 16px. En este caso 1em = 16px */
+    margin: -2em .5em .5em;
+
+    /* bajaremos también un poco el padding */
+    padding: 1em;
+
   }
 }
 
