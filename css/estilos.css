@@ -375,6 +375,10 @@ figure {
   .hero {
     /* Necesitamos prescindir del alto fijo */
     height: auto;
+
+    /* Necesitamos marcar aquí una posición relativa para que sirva de guía a los elementos subordinados. */
+    position: relative;
+    /* Lo hemos conseguido en este instante. La imagen subordinada ahora está dentro del hero y el menú superior vuelve a tomar su lugar. */
   }
   .hero-image {
     position: absolute;
