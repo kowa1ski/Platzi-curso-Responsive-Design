@@ -371,6 +371,29 @@ figure {
 
 /* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
 @media screen and (max-width: 767px) {
+
+  .hero {
+    /* Necesitamos prescindir del alto fijo */
+    height: auto;
+  }
+  .hero-image {
+    position: absolute;
+    z-index: 1;
+
+    /* queremos que esta imagen deje de respetar el padding así que le damos las siguientes instrucciones.
+    Así lograremos que se estire en todas direcciones.*/
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+    z-index: 2;
+  }
+
+
   /* Comenzamos readaptando el header para esta resolución */
   .header {
     /* Esto hará que el menú se coloque bajo el logo */
