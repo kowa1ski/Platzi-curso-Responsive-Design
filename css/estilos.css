@@ -356,23 +356,9 @@ figure {
 
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
 @media screen and (max-width: 1024px) {
-  body {
-    /* border: 10px solid green; */
-
-  }
-  /* agregamos un poquito de padding para que los elementos de abajo no se peguen tanto a los costados. Para ello vamos a modificar un poco el , container , que afectará a todos los contenedores pero que está controlado, el resultado es bueno. */
-  .container {
-    padding: 0 1em;
-  }
-}
-
-/* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
-/* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
-
-/* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
-@media screen and (max-width: 767px) {
 
   .hero {
+
     /* Necesitamos prescindir del alto fijo */
     height: auto;
 
@@ -390,13 +376,30 @@ figure {
     left: 0;
     top: 0;
     bottom: 0;
+
+    /* Sólo con las instrucciones de las direcciones no obtenemos el resultado que queremos. Esto no entiendo por qué pasa pero es así. En definitiva, que tenemos que forzar que se estire la imagen y para ello necesitamos ordenar un ancho. */
+    width: 100%;
   }
 
   h1 {
     font-size: 2em;
     z-index: 2;
   }
+  body {
+    /* border: 10px solid green; */
 
+  }
+  /* agregamos un poquito de padding para que los elementos de abajo no se peguen tanto a los costados. Para ello vamos a modificar un poco el , container , que afectará a todos los contenedores pero que está controlado, el resultado es bueno. */
+  .container {
+    padding: 0 1em;
+  }
+}
+
+/* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
+/* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
+
+/* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
+@media screen and (max-width: 767px) {
 
   /* Comenzamos readaptando el header para esta resolución */
   .header {
