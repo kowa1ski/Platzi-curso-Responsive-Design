@@ -357,6 +357,16 @@ figure {
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
 @media screen and (max-width: 1024px) {
 
+
+  body {
+    /* border: 10px solid green; */
+
+  }
+  /* agregamos un poquito de padding para que los elementos de abajo no se peguen tanto a los costados. Para ello vamos a modificar un poco el , container , que afectará a todos los contenedores pero que está controlado, el resultado es bueno. */
+  .container {
+    padding: 0 1em;
+  }
+
   .hero {
 
     /* Necesitamos prescindir del alto fijo */
@@ -365,6 +375,13 @@ figure {
     /* Necesitamos marcar aquí una posición relativa para que sirva de guía a los elementos subordinados. */
     position: relative;
     /* Lo hemos conseguido en este instante. La imagen subordinada ahora está dentro del hero y el menú superior vuelve a tomar su lugar. */
+
+    /* Acaba de comenzar este commit y en este instante la imagen principal(la que estamos modificando justo debajo) se ha desbordado de este , .hero ,. para corregir este comportamiento, desde este sitio vamos a ordenar lo siguiente que precisamente se llama "desbordamiento". */
+    overflow: hidden;
+    /* El padding nombrado está establecido en fijo. Ahora lo que vamos a hacer es nombrar un porquito de padding más dinámico */
+    padding: 2em;
+    /* Este padding está afectando sólo al texto */
+
   }
   .hero-image {
     position: absolute;
@@ -384,14 +401,6 @@ figure {
   h1 {
     font-size: 2em;
     z-index: 2;
-  }
-  body {
-    /* border: 10px solid green; */
-
-  }
-  /* agregamos un poquito de padding para que los elementos de abajo no se peguen tanto a los costados. Para ello vamos a modificar un poco el , container , que afectará a todos los contenedores pero que está controlado, el resultado es bueno. */
-  .container {
-    padding: 0 1em;
   }
 }
 
@@ -497,6 +506,14 @@ figure {
 }
 
 @media screen and (max-width: 480px) {
+
+  /* Hemos notado que en este tamaño, la fuente del h1 resulta demasiado grande. Vamos a bajarla. */
+  h1 {
+    font-size: 1.5em;
+  }
+
+
+
   .project-details {
     font-size: 12px;
   }
@@ -536,5 +553,16 @@ figure {
 @media screen and (max-width: 320px) {
   body {
     /* border: 10px solid green; */
+  }
+
+  h1 {
+    font-size: 1.2em;
+
+    /* Atentos!! aquí. Vamos a resaltar el texto con un fondo semitransparente */
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* No queda del todo mal, pero la mejor solución sería manipular la propia imagen para mejorar el contraste con el texto. Manipular la imagen propiamente, manipularla como imagen en algún editor de imagen. */
+  }
+  .hero {
+    padding: 2em 1em;
   }
 }
