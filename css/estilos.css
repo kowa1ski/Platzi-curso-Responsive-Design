@@ -432,6 +432,8 @@ figure {
   padding-top: 56.25%;
   /* Y entonces, ¿cuál es el valor que se está aplicando? porque aquí sólo se han dado porcentajes. Pues bien. Debido a que se está aplicando un porcentaje en el padding, el valor que se está cogiendo es el del ancho de la pantalla y ese padding será su 56.25%. Y este valor porcentual se obtiene de la fórmula h(altura)*100/w(anchura) del vídeo de youtube que hemos insertado y cuyos valores se pueden ver en el html que son , width="560" height="315" ,. */
   background: blue;
+  /* Vamos a darle una posición relativa para que la posición absoluta del vídeo que hemos metido dentro de este div en html pueda contenerse. */
+  position: relative;
 }
 
 /* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
