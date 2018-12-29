@@ -404,6 +404,12 @@ figure {
   }
 }
 
+.html-video {
+  width: 100%;
+  /* La diferencia con , max-width: 100% , es que este último ocupará el 100% cuando pueda y sea su 100% original también. Sin embargo con el width normal se irá hasta ese 100% de la página aunque la misma sea más grande. */
+  height: auto;
+}
+
 /* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
 /* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
 
