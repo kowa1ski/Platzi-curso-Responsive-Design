@@ -410,6 +410,30 @@ figure {
   height: auto;
 }
 
+.youtube-video {
+  /* width: 100%;
+  height: auto;
+  Hemos probado con esas dos instrucciones de arriba y el video no obtiene el resultado esperado. Es la diferencia entre insertar un video, donde sí que funciona, a incrustar este. Lo que hay que manipular es la etiqueta , iframe , así que comentamos las dos líneas de código y continuamos con la incrustación correcta del vídeo. */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.video-flexible {
+  /* Atentos al truco */
+  width: 100%;
+  height: 0;
+  /* Aquí está el meollo */
+  padding-top: 56.25%;
+  /* Y entonces, ¿cuál es el valor que se está aplicando? porque aquí sólo se han dado porcentajes. Pues bien. Debido a que se está aplicando un porcentaje en el padding, el valor que se está cogiendo es el del ancho de la pantalla y ese padding será su 56.25%. Y este valor porcentual se obtiene de la fórmula h(altura)*100/w(anchura) del vídeo de youtube que hemos insertado y cuyos valores se pueden ver en el html que son , width="560" height="315" ,. */
+  background: blue;
+}
+
 /* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
 /* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
 
