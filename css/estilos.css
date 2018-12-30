@@ -391,7 +391,7 @@ figure {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: red;
+  background: rgba( 0, 0, 0, .8);
   /* le asignamos un display block porque el display por defecto es el , line , y no dejaría asignar un alto y ancho como queremos que pase y que hemos ordenado estas líneas de justo arriba. */
   display: block;
   /* Hasta esta línea nuestro icono aparece descentrado en el círculo rojo que acabamos de dibujar con css. Ahora hay muchas formas de centrarlo pero vamos a optar por la siguiente, por ejemplo. */
@@ -403,6 +403,18 @@ figure {
   /* centrado de manera horizontal ya que es un texto!!! */
   text-align: center;
   /* Y ya tenemos el botón!!!. Mola mola */
+  /* Ahora vamos a asignarle una posición, vamos a colocarlo. */
+  /* position: absolute; Este estaría bien pero si hacemos scroll por la pantalla no nos persigue. Así que vamos a aplicar lo siguiente: */
+  position: fixed;
+  /* Y ahora resulta que cuando pasa por la foto se esconde detrás de ella. Para arreglarlo pues así lo vamos a hacer. */
+  z-index: 4;
+  /* Ahora vamos a moverlo un porquito para que no se nos pegue a las esquinas. */
+  left: 5px;
+  top: 5px;
+  /* Recordamos que nuestro icono es una fuente así que cambiarle lo siguiente va a ser muy fácil. */
+  color: white;
+  /* En pantallas grandes no queremos mostrarlo. En principio le vamos a mostrar un display de none. */
+  display: none;
 }
 
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
@@ -492,6 +504,11 @@ figure {
 
 /* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
 @media screen and (max-width: 767px) {
+
+  /* Y aquí comenzamos a mostrar el icono del menú burguer */
+  .burguer-button {
+    display: block;
+  }
 
   /* Comenzamos readaptando el header para esta resolución */
   .header {
