@@ -394,6 +394,15 @@ figure {
   background: red;
   /* le asignamos un display block porque el display por defecto es el , line , y no dejaría asignar un alto y ancho como queremos que pase y que hemos ordenado estas líneas de justo arriba. */
   display: block;
+  /* Hasta esta línea nuestro icono aparece descentrado en el círculo rojo que acabamos de dibujar con css. Ahora hay muchas formas de centrarlo pero vamos a optar por la siguiente, por ejemplo. */
+  align-items: center;
+  justify-content: center;
+  /* Esa sería una forma muy válida. Para mmí, quizá la mejor. Sin embargo en el curso, para que aprendamos, se deciden a hacerlo de esta manera siguiente. */
+  /* Centrada manera vertical */
+  line-height: 40px;
+  /* centrado de manera horizontal ya que es un texto!!! */
+  text-align: center;
+  /* Y ya tenemos el botón!!!. Mola mola */
 }
 
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
