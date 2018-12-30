@@ -7,5 +7,5 @@
 <font-face units-per-em="1024" ascent="960" descent="-64" />
 <missing-glyph horiz-adv-x="1024" />
 <glyph unicode="&#x20;" horiz-adv-x="512" d="" />
-<glyph unicode="&#x1f47d;" glyph-name="menu" d="M64 768h896v-192h-896zM64 512h896v-192h-896zM64 256h896v-192h-896z" />
+<glyph unicode="&#xe900;" glyph-name="menu" d="M64 768h896v-192h-896zM64 512h896v-192h-896zM64 256h896v-192h-896z" />
 </font></defs></svg>

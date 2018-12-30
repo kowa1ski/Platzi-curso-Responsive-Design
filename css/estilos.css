@@ -29,14 +29,14 @@ valores */
 /* celeste = #026fff */
 
 /* A continucación estoy copiando el contenido del archivo style que me venía con una carpeta que me he bajado en un zip. Esta carpeta contiene los elementos necesarios para que pueda insertar el icono del menú de hamburguesa. Esto lo he bajado de la página , https://icomoon.io ,. En verdad es una fuente y se comportará como tal a nivel local sin tener singún script que llame a otro sitio como pasaba con la llamada a la api de fuentes de google. Total que pego el código que hace falta que es el siguiente:  */
-Atentos aquí porque la carpeta de fuentes la hemos ubicado dentro del directorio de trabajo. Por lo tanto las llamadas a los archivos de estas fuentes deben ser modificados para que encuentren la ruta.
+/* Atentos aquí porque la carpeta de fuentes la hemos ubicado dentro del directorio de trabajo. Por lo tanto las llamadas a los archivos de estas fuentes deben ser modificados para que encuentren la ruta. */
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?ibgyj8');
-  src:  url('../fonts/icomoon.eot?ibgyj8#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?ibgyj8') format('truetype'),
-    url('../fonts/icomoon.woff?ibgyj8') format('woff'),
-    url('../fonts/icomoon.svg?ibgyj8#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?l9q23q');
+  src:  url('../fonts/icomoon.eot?l9q23q#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?l9q23q') format('truetype'),
+    url('../fonts/icomoon.woff?l9q23q') format('woff'),
+    url('../fonts/icomoon.svg?l9q23q#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -57,9 +57,8 @@ Atentos aquí porque la carpeta de fuentes la hemos ubicado dentro del directori
 }
 
 .icon-menu:before {
-  content: "\1f47d";
+  content: "\e900";
 }
-
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
