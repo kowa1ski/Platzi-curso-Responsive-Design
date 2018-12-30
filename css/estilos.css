@@ -386,6 +386,16 @@ figure {
   flex-wrap: inherit;
 }
 
+/* Con esta nueva clase damos diseño al icono recién creado y que queremos convertirlo en botón. */
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+  /* le asignamos un display block porque el display por defecto es el , line , y no dejaría asignar un alto y ancho como queremos que pase y que hemos ordenado estas líneas de justo arriba. */
+  display: block;
+}
+
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
 @media screen and (max-width: 1024px) {
 
