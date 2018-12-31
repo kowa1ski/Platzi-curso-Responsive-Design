@@ -539,6 +539,14 @@ figure {
     text-align: center;
   }
 
+  /* Vamos a darle estilos al menú. Esto no es el burguer button, es el menú que también va a acompañar nuestro scroll. */
+  .menu {
+    position: fixed;
+    /* le damos un fondo */
+    background: red;
+    z-index: 3;
+  }
+
   .project {
     display: block;
   }
