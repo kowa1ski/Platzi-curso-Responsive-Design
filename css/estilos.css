@@ -555,6 +555,11 @@ figure {
     /* Y el alto igual ViewPort height. */
     height: 100vh;
 
+    /* Vamos a colocar los elementos dentro del espacio del menú. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 
   .project {
