@@ -545,6 +545,16 @@ figure {
     /* le damos un fondo */
     background: red;
     z-index: 3;
+    /* Con estas tres líneas se ha posicionado tal y como se encuentra dentro del html pero tenemos que moverlo a donde nosotros queremos que esté y tal y como queremos que aparezca. */
+    top: 0;
+    left: 0;
+    /* Con esas dos líneas lo acabamos de ubicar pegadito arriba y a la derecha, justo detrás del botón del burguer button.  */
+
+    /* Ahora vamos a aprender otra medida relativa. Se trata del ViewPort width ((o vw)) que lo que hace es ajustar al ancho de la pantalla. */
+    width: 100vw;
+    /* Y el alto igual ViewPort height. */
+    height: 100vh;
+
   }
 
   .project {
