@@ -532,6 +532,12 @@ figure {
   /* queremos los , a , centrados */
   .header a {
     justify-content: center;
+
+    /* Vamos a dar un poco de estilo a los items del menú */
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
   }
 
   /* Y el logo también lo queremos centrado */
@@ -543,7 +549,7 @@ figure {
   .menu {
     position: fixed;
     /* le damos un fondo */
-    background: red;
+    background: rgba(5, 111, 255, .9);
     z-index: 3;
     /* Con estas tres líneas se ha posicionado tal y como se encuentra dentro del html pero tenemos que moverlo a donde nosotros queremos que esté y tal y como queremos que aparezca. */
     top: 0;
@@ -553,7 +559,9 @@ figure {
     /* Ahora vamos a aprender otra medida relativa. Se trata del ViewPort width ((o vw)) que lo que hace es ajustar al ancho de la pantalla. */
     width: 100vw;
     /* Y el alto igual ViewPort height. */
-    height: 100vh;
+    /* height: 100vh; */
+    /* Resulta que hasta ahora el menú no se estira en vertical por la configuración misma del listado. Vamos a forzar que se estire hasta abajo comentando la que acabamos de comentar , vh , y ordenando lo siguiente. */
+    bottom: 0;
 
     /* Vamos a colocar los elementos dentro del espacio del menú. */
     display: flex;
