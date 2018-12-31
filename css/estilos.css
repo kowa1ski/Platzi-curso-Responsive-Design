@@ -553,7 +553,9 @@ figure {
     z-index: 3;
     /* Con estas tres líneas se ha posicionado tal y como se encuentra dentro del html pero tenemos que moverlo a donde nosotros queremos que esté y tal y como queremos que aparezca. */
     top: 0;
-    left: 0;
+
+    /* Vamos ahora a ocultar el menú en la parte izquierda fuera de la vista. Nótese que la medida es la misma que se aplica para el ancho pero con valor negativo. */
+    left: -100vw;
     /* Con esas dos líneas lo acabamos de ubicar pegadito arriba y a la derecha, justo detrás del botón del burguer button.  */
 
     /* Ahora vamos a aprender otra medida relativa. Se trata del ViewPort width ((o vw)) que lo que hace es ajustar al ancho de la pantalla. */
@@ -568,6 +570,16 @@ figure {
     align-items: center;
     justify-content: center;
 
+    /* Añadimos un efecto de transición que funcionará cuando salga el menú de su escondite. */
+    transition: .3s;
+
+  }
+
+  /* Preparamos una clase que será la que reaccionará cuando el menú se active. */
+  /* Es de destacar LA SINTAXIS que se ve en la siguiente línea porque se ve una clase, un punto y seguido otra clase. Esto se interpreta con un , and ,, o sea, que se ejecutarán las instruccines sólo cuando las dos clases coincidan al mismo tiempo. */
+  .menu.is-active {
+    /* Con esta instrucción haremos que la parte izquierda vuelva al 0. */
+    left: 0;
   }
 
   .project {
