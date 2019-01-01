@@ -206,7 +206,8 @@
       ipad.addListener(validation); // validation es una función. Le hemos dado este nombre como le podíamos haber llamado osoPanda.
       // Y claro, ahora vamos a armar esa función:
       function validation(event) { // Y , event , también podríamos haberlo llamado patrullaCanina, que nos hubiera servido igual.
-      console.log(event);
+      console.log(event.matches);
+      // Este , .matches , es la propiedad que nos devolverá verdadero o falso y por ello nos dirigimos contra ella para usar ese valor.
       }
       // Y con esto hemos conseguido que cuando se mueva la pantalla, que la pantalla cambie de resolución/tamaño, pues se active este listener. Lo podemos comprobar en la página agrandando o achicando la misma en la pantalla.
 
