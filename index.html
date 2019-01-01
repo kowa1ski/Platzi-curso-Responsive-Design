@@ -199,13 +199,23 @@
       // A continuación, ya con las variables declaradas, vamos a darle marcha a esto. Venga!! A por el siguiente commit!
 
       // Añadimos un listener
-      burgerButton.addEventListener('click', hideShow);
+      // burgerButton.addEventListener('click', hideShow);
       // La función hideShow la hemos nombrado así nosotros, claro.
 
       // flipa con las siguientes líneas. Ahora la variable , ipad , tiene una serie de propiedades. Entre ellas está la siguiente que No tiene que confundirse con addEventListener. No confundir.
       ipad.addListener(validation); // validation es una función. Le hemos dado este nombre como le podíamos haber llamado osoPanda.
       // Y claro, ahora vamos a armar esa función:
       function validation(event) { // Y , event , también podríamos haberlo llamado patrullaCanina, que nos hubiera servido igual.
+      // Lo siguiente que vamos a hacer está cantado. Vamos a utilizar esta propiedad para decidir con un if. Vamos allá.
+      if (event.matches) {
+        // Pues aquí agregamos el listener.
+        burgerButton.addEventListener('click', hideShow);
+      } else {
+        // Si no se cumple la condición debemos explicitar que no haya ningún escuchante listener para optimizar los recursos. Para ello esto es sencillísimo. Sólo hay que quitarlo si no hace falta. Con removeEtcEtcEtc. Venga.
+        burgerButton.removeEventListener('click', hideShow);
+      }
+
+
       console.log(event.matches);
       // Este , .matches , es la propiedad que nos devolverá verdadero o falso y por ello nos dirigimos contra ella para usar ese valor.
       }
