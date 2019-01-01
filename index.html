@@ -184,7 +184,20 @@
       // Y volvemos a comprobar que esto también se está llevando a cabo de la manera correcta.
       console.log(burgerButton);
 
-      A continuación, ya con las variables declaradas, vamos a darle marcha a esto. Venga!! A por el siguiente commit!
+      // A continuación, ya con las variables declaradas, vamos a darle marcha a esto. Venga!! A por el siguiente commit!
+
+      // Añadimos un listener
+      burgerButton.addEventListener('click', hideShow);
+      // La función hideShow la hemos nombrado así nosotros, claro.
+
+      // A continuación vamos a ver qué es lo que hace esta función. Vamos a decirle que haga algo.
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
 
     </script>
   </body>
