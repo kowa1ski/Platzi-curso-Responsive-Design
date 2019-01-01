@@ -172,7 +172,20 @@
     </footer>
     <!-- Aquí vamos a brir un espacio para JS -->
     <script type="text/javascript">
-      
+      // No está nada mal ir añadiendo console.log para ir cogiendo control de que todo funciona correctamente.
+      console.log('Hola mundo esta es la primera línea de control -');
+      // Creamos la variable , menu , y metemos dentro todo el menú html
+      const menu = document.querySelector('.menu');
+      // Ahora comprobamos que la variable funciona.
+      console.log(menu);
+      // Comprobando que todo va funcionando correctamente vamos a por el botón del menú. Vamos a meterlo en una variable.
+      // Para ello nos valemos del , id , que acabamos de marcar arriba y para eso lo llamamos con el símbolo , # , que es el que busca entre los , id ,.
+      const burgerButton = document.querySelector('#burger-menu');
+      // Y volvemos a comprobar que esto también se está llevando a cabo de la manera correcta.
+      console.log(burgerButton);
+
+      A continuación, ya con las variables declaradas, vamos a darle marcha a esto. Venga!! A por el siguiente commit!
+
     </script>
   </body>
 </html>
