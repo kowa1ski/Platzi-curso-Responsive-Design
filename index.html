@@ -182,8 +182,12 @@
       // Lo que vamos a hacer a continuación es lo siguiente. Resulta que acabamos de darle funcionalidad al botón del menú. Al botón de hamburguesa. Pero el botón de hamburguesa no se ve en todas las resoluciones. Se ve sólo a partir de un tamaño por debajo del iPad. Lo que queremos es hacer que el listener se ponga a la escucha pero sólo cuando le haga falta. Por ejmplo, no queremos que esté a la escucha cuando la resolución es desktop.
 
       // Entonces ahora vamos a invocar a otra API que tiene el navegador. Está dentro de la pantalla, dentro de window. Y para comenzar vamos a hacer un console.log();.
-      console.log(window.matchMedia('screen and (max-width: 767px)'));
+      // console.log(window.matchMedia('screen and (max-width: 767px)'));
       // Pues con esa instrucción, en la consola de la ventana de inspección del navegador, jugando con las resoluciones, podemos comprobar cómo devuelve verdadero o falso dependiendo del tamaño que le estamos dando a la ventana a inspeccionar.
+
+      // Qué ocurre? que la instrucción mediaQuery funciona pero no es dinámica. Sólo funciona cuando cargamos la página. Ahora intentaremos que sea dinámico para que cuando movamos la pantalla de tamaño o giremos el teléfono Entonces Sí se recargue y conseguimos que sea dinámica la respuesta a esta instrucción.
+      // Lo primero vamos a hacer las cosas bien y vamos a meter esta instrucción en una variable. La llamaremos ipad porque es a partir de un pixel por debajo de esa resolución que haremos que funcione todo esto.
+      const ipad = window.matchMedia('screen and (max-width: 767px)');
 
 
       // Comprobando que todo va funcionando correctamente vamos a por el botón del menú. Vamos a meterlo en una variable.
@@ -197,6 +201,14 @@
       // Añadimos un listener
       burgerButton.addEventListener('click', hideShow);
       // La función hideShow la hemos nombrado así nosotros, claro.
+
+      // flipa con las siguientes líneas. Ahora la variable , ipad , tiene una serie de propiedades. Entre ellas está la siguiente que No tiene que confundirse con addEventListener. No confundir.
+      ipad.addListener(validation); // validation es una función. Le hemos dado este nombre como le podíamos haber llamado osoPanda.
+      // Y claro, ahora vamos a armar esa función:
+      function validation(event) { // Y , event , también podríamos haberlo llamado patrullaCanina, que nos hubiera servido igual.
+      console.log(event);
+      }
+      // Y con esto hemos conseguido que cuando se mueva la pantalla, que la pantalla cambie de resolución/tamaño, pues se active este listener. Lo podemos comprobar en la página agrandando o achicando la misma en la pantalla.
 
       // A continuación vamos a ver qué es lo que hace esta función. Vamos a decirle que haga algo.
       function hideShow() {
