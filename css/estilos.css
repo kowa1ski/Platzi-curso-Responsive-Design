@@ -418,7 +418,11 @@ figure {
 }
 
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
+
+  .event-list-title {
+    margin-left: 0;
+  }
 
   /* Después de haber visto la página en un terminal móvil(iphone) preferimos que no tenga padding lo siguiente a partir de estas resoluciones. */
   .portfolio {
@@ -509,6 +513,11 @@ figure {
 
 /* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
 @media screen and (max-width: 767px) {
+
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
 
   /* Y aquí comenzamos a mostrar el icono del menú burguer */
   .burguer-button {
@@ -622,7 +631,7 @@ figure {
     font-size: 1em;
   }
   .project-description {
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .event {
@@ -663,7 +672,7 @@ figure {
 
 
   .project-details {
-    font-size: 12px;
+    font-size: 14px;
   }
   /* El contacto tiene un alto fijo, por eso a partir de este tamaño se le va a trabajar con otro tamaño */
   .contact {
@@ -695,6 +704,13 @@ figure {
     /* En este momento los elementos no guardan una buena relación aunque ya estén apilados. Estamos sufriendo , margin colapsing ,. Para arreglarlo vamos a usar un truco de magia. Un hack o algo así que en este momento desconozco por qué funciona pero lo hace.
     Vamos a añadir un borde Transparente*/
     border: 1px solid transparent;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+
   }
 }
 
