@@ -205,6 +205,9 @@
       // flipa con las siguientes líneas. Ahora la variable , ipad , tiene una serie de propiedades. Entre ellas está la siguiente que No tiene que confundirse con addEventListener. No confundir.
       ipad.addListener(validation); // validation es una función. Le hemos dado este nombre como le podíamos haber llamado osoPanda.
       // Y claro, ahora vamos a armar esa función:
+      // Hemos encontrado un problema y es que, cuando cargamos la página en el teléfono o en una resolución de las bajas, el menú funciona porque esta línea no se ejecuta nunca. Vamos a ponerle remedio.
+
+      // La función validadión, pues, debería ejecutarse nada más cargue la página.
       function validation(event) { // Y , event , también podríamos haberlo llamado patrullaCanina, que nos hubiera servido igual.
       // Lo siguiente que vamos a hacer está cantado. Vamos a utilizar esta propiedad para decidir con un if. Vamos allá.
       if (event.matches) {
@@ -215,11 +218,13 @@
         burgerButton.removeEventListener('click', hideShow);
       }
 
-
       console.log(event.matches);
       // Este , .matches , es la propiedad que nos devolverá verdadero o falso y por ello nos dirigimos contra ella para usar ese valor.
       }
       // Y con esto hemos conseguido que cuando se mueva la pantalla, que la pantalla cambie de resolución/tamaño, pues se active este listener. Lo podemos comprobar en la página agrandando o achicando la misma en la pantalla.
+
+      // Para hacer lo explicado vamos a ejecutar , validation() , en la siguiente línea para obligar a que se ejecute por primera vez nada más se cargue la página. Vamos a notar que la función, en la actual línea 211, recibe un evento al que luego leemos el match. Esta función era en el anterior commit invocada desde un método de la variable , ipad , que habíamos creado. Y como método que era funcionaba bien. Qué ocurre? pues que ahora es invocada directamente así que por parámetro le vamos a pasar , ipad , para que su match sea leído de igual forma que lo hacía siendo invocado desde el método que mencionamos.
+      validation(ipad);
 
       // A continuación vamos a ver qué es lo que hace esta función. Vamos a decirle que haga algo.
       function hideShow() {

@@ -420,6 +420,11 @@ figure {
 /* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
 @media screen and (max-width: 1024px) {
 
+  /* Después de haber visto la página en un terminal móvil(iphone) preferimos que no tenga padding lo siguiente a partir de estas resoluciones. */
+  .portfolio {
+    padding: 0;
+  }
+
 
   body {
     /* border: 10px solid green; */
